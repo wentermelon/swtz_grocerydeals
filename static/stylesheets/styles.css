@@ -2,93 +2,86 @@
   margin: 0;
   padding: 0;
 }
-
 #desiredProduct {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
 }
-
 #product {
+  font-family: screentext;
   width: 15%;
   padding: 10px 10px;
   margin: 8px 5px;
   box-sizing: border-box;
 }
-
 #address {
+  font-family: screentext;
   width: 25%;
   padding: 10px 10px;
   margin: 8px 5px;
   box-sizing: border-box;
 }
-
 input[type="submit"] {
+  font-family: screentext;
   background-color: #ffd275;
   border: none;
-  color: #a57f60;
+  color: #1f1e1e;
   padding: 12px 25px;
-  text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
 }
 
-#gradientbackground {
-  height: 615px;
-  background-attachment: fixed;
-  background-color: rgb(
-    165,
-    127,
-    96
-  ); /* For browsers that do not support gradients */
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(227, 165, 135),
-    rgb(165, 127, 96)
-  ); /* Standard syntax (must be last) */
-}
-
-div.fixed {
+div.logo {
   position: fixed;
   bottom: 1080;
   right: 1000;
   width: 120px;
 }
 
+div.title {
+  position: fixed;
+  top: 100;
+  left: 0;
+  width: 1360px;
+  align-items: center;
+}
+
 img {
-  /* border: 1px solid #ddd; */
-  border-radius: 4px;
+  border-radius: 50%;
   padding: 5px;
   width: 75px;
 }
-
 img:hover {
-  box-shadow: 0 0 1px 2px rgba(0, 140, 186, 0.5);
+  box-shadow: 0 0 1px 2px rgba(177, 37, 84, 0.5);
 }
-
 @font-face {
-  font-family: trial;
+  font-family: appname;
+  src: url("/static/css/fonts/Shink\ Font\ by\ Rifki\ \(7NTypes\).otf");
+}
+@font-face {
+  font-family: screentext;
   src: url("/static/css/fonts/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf");
 }
 body {
   background-color: rgb(227, 165, 135);
-  background-image: url("/static/css/img/silhouette-bg.png");
+  background-image: url("/static/css/img/BACKGROUND.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 h1 {
-  font-family: trial;
+  font-family: screentext;
   color: rgb(0, 0, 0);
-  text-align: center;
-  font-size: 75px;
+  font-size: 100px;
   font-weight: lighter;
+  text-align-last: center;
 }
 h2 {
-  font-family: "Verdana";
-  color: rgb(81, 24, 238);
-  text-align: left;
+  font-family: appname;
+  color: rgba(196, 147, 123, 0);
+  font-size: 80px;
+  text-align-last: center;
 }
 h3 {
   font-family: "Roboto";
