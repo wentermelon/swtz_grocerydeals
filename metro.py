@@ -3,7 +3,9 @@ import bs4
 from bs4 import BeautifulSoup
 import json
 
-URL = 'https://www.metro.ca/en/online-grocery/search?sortOrder=relevance&filter=apple&freeText=true'
+search_term = "apples"
+
+URL = 'https://www.metro.ca/en/online-grocery/search?sortOrder=relevance&filter={}&freeText=true'.format(search_term)
 page = requests.get(URL)
 
 soup = BeautifulSoup(page.content, 'html.parser')
