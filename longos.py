@@ -55,14 +55,6 @@ products_json = json.dumps(products_dict)
 # Prints the JSON on the terminal; use a JSON parser to read it 
 # print(products_json)
 
-# BEGINNING OF GOOGLEMAPS CODE
-
-API_Key = "AIzaSyC5hX_ccGsWexNYHYVreA8qsFtG0Kj9MHM"
-
-gmaps = googlemaps.Client(API_Key)
-
-# print(gmaps.find_place("longos guelph", "textquery"))
-print(gmaps.place(gmaps.find_place("longos guelph", "textquery")['candidates'][0]['place_id'])['result'])
 
 
 
