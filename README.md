@@ -1,1 +1,1 @@
-# hack-instead-2020
+A web-scraping project by Tinson, Wency, Shamsi, and Zaza for Hack Instead 2020.
