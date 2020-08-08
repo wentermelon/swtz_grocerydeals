@@ -1,6 +1,4 @@
 import requests
-import pprint
-import re
 import bs4
 from bs4 import BeautifulSoup
 
