@@ -3,6 +3,8 @@ import bs4
 from bs4 import BeautifulSoup
 import json
 
+
+#Search term generality
 search_term = "apples"
 
 URL = 'https://www.metro.ca/en/online-grocery/search?sortOrder=relevance&filter={}&freeText=true'.format(search_term)
@@ -46,13 +48,12 @@ for product in products_list:
     product_link = product.find('a', {"class": "pt--image product-details-link"})['href'].strip()
     product_link = MetroURL + product_link
 
-    print("{} at {} {}".format(product_name, product_price, product_unit))
-    print("Buy at: {}".format(product_link))
-    print()
+    #print("{} at {} {}".format(product_name, product_price, product_unit))
+    #print("Buy at: {}".format(product_link))
+    #print()
 
     #Cleaning up output
     if "\xa0" in product_unit:
-        print("TEST")
         product_unit = product_unit.replace("\xa0", "")
 
     #Add it to dictionary
@@ -60,4 +61,4 @@ for product in products_list:
 
 #NTS: There is a SyntaxError: JSON.parse: but it doesn't actually interfere with anything
 products_json = json.dumps(products_dict)
-print(products_json)
+#print(products_json)
