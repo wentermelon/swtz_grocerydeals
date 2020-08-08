@@ -1,5 +1,6 @@
 import googlemaps
 from datetime import datetime
+import json
 
 ##GOOGLEMAPS PART
 API_key = "AIzaSyC5hX_ccGsWexNYHYVreA8qsFtG0Kj9MHM"
@@ -21,4 +22,5 @@ if not len(gmaps_nearby):
     print("No results nearby! Try expanding your search radius.")
 else:
     #print(gmaps_nearby)
-    print("OK!")
+    gmaps_json = json.dumps(gmaps_nearby)
+    print(gmaps_json)
