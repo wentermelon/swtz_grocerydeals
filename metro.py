@@ -68,4 +68,5 @@ for product in products_list:
     if product.find("div", {"class":"pt-title"}) == None:
         continue
 
-    print(product.find("div", {"class":"pt-title"}).text.strip())
+    # print(product.find("div", {"class":"pt-title"}).text.strip())
+    print(product.find("span", {"class":"pi-price"}).text.strip())
