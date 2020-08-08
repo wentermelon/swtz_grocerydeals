@@ -1,5 +1,6 @@
 #gradientbackground {
     height: 615px;
+    background-attachment: fixed;
     background-color: rgb(165,127,96); /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right,rgb(227,165,135), rgb(165,127,96)); /* Standard syntax (must be last) */
   }
@@ -12,26 +13,31 @@ div.fixed {
   }
 
 img {
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 4px;
     padding: 5px;
     width: 75px;
-  }
-
 }
 
 img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    box-shadow: 0 0 1px 2px rgba(0, 140, 186, 0.5);
 }
-/* body{
+
+@font-face {
+    font-family: trial;
+    src: url('fonts/Milko\ Denilo.ttf');
+}
+body{
     background-color: rgb(227,165,135);
-    background-image: url("img/Darkened.png");
+    background-image: url("img/silhouette-bg.png");
     background-size: 1400px, 900px;
-} */
+}
 h1{
-    font-family: "Candara"; 
-    color: rgb(17, 10, 9); 
+    font-family: trial; 
+    color: rgb(0, 0, 0); 
     text-align: center;
+    font-size: 75px;
+    font-weight: lighter;
 }
 h2{
     font-family: "Verdana";  
