@@ -57,5 +57,5 @@ for product in products_list:
     products_dict[product_name] = [product_price, product_unit, product_link]
 
 #NTS: There is a SyntaxError: JSON.parse: but it doesn't actually interfere with anything
-json.dumps(products_dict)
-print(products_dict)
+products_json = json.dumps(products_dict)
+print(products_json)
