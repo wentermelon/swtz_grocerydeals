@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 import googlemaps
 import datetime
 
-
 # Feel free to change this to user input
 search_term = "cat"
 
