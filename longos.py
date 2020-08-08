@@ -1,9 +1,13 @@
 import requests
 import bs4
+import json
 from bs4 import BeautifulSoup
 
+# Feel free to change this to user input
+search_term = "cat"
+
 # DEFAULT SEARCH TERM AS "apple"
-URL = "https://www.grocerygateway.com/store/groceryGateway/en/search/?text=apple"
+URL = "https://www.grocerygateway.com/store/groceryGateway/en/search/?text={}".format(search_term)
 
 # requests sends HTTP request to the URL above
 page = requests.get(URL)
@@ -28,15 +32,23 @@ for product in products:
 
     products_list.append(product)
 
-# Prints each product and their prices on the page
+# Setting up the dictionary to convert to JSON later
+products_dict = {}
+
+# Cycles through all products on page
+# Retrieves name, price, per unit, and link. Stores it in the products dictionary.
 for product in products_list:
-    print("---------------------------")
-    print(product.find("a", {"class":"product-card__name"}).text.strip())
-    print(product.find("span", {"class":"cart_reader"}).text.strip() + " " + products_list[0].find("span", {"class":""}).text.strip())
-    # print(products_list[0].find("span", {"class":""}).text.strip())
-    print("---------------------------")
-    print()
 
+    product_name = product.find("a", {"class":"product-card__name"}).text.strip()
+    product_price = product.find("span", {"class":"cart_reader"}).text.strip()
+    product_unit = products_list[0].find("span", {"class":""}).text.strip()
+    product_link = "https://www.grocerygateway.com/" + products_list[0].find("a", {"class":"product-card__name"})['href']
 
+    products_dict[product_name] = [ product_price, product_unit, product_link ]
+
+# The JSON object containing the search results
+products_json = json.dumps(products_dict)
+# Prints the JSON on the terminal; use a JSON parser to read it 
+print(products_json)
 
 
