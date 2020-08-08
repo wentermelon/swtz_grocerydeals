@@ -1,7 +1,12 @@
 import requests
-import bs4
 import json
+
+import bs4
 from bs4 import BeautifulSoup
+
+import googlemaps
+import datetime
+
 
 # Feel free to change this to user input
 search_term = "cat"
@@ -49,6 +54,17 @@ for product in products_list:
 # The JSON object containing the search results
 products_json = json.dumps(products_dict)
 # Prints the JSON on the terminal; use a JSON parser to read it 
-print(products_json)
+# print(products_json)
+
+# BEGINNING OF GOOGLEMAPS CODE
+
+API_Key = "AIzaSyC5hX_ccGsWexNYHYVreA8qsFtG0Kj9MHM"
+
+gmaps = googlemaps.Client(API_Key)
+
+# print(gmaps.find_place("longos guelph", "textquery"))
+print(gmaps.place(gmaps.find_place("longos guelph", "textquery")['candidates'][0]['place_id'])['result'])
+
+
 
 
