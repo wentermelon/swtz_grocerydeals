@@ -7,20 +7,14 @@
   <body>
     {% extends "template.html" %} <!--This lets us set the default standard for all pgs in this project-->
     {% block content %}
-   
     <div class="fixed">
-         
-        <a target="_blank" href="{{ url_for('static', filename='css/img/logo_placeholder.png') }}">
-            <img src="{{ url_for('static', filename='css/img/logo_placeholder.png') }}" alt="Paris">
+        <a target="_blank" href="{{ url_for('static', filename='css/img/Logo.png') }}">
+            <img src="{{ url_for('static', filename='css/img/Logo.png') }}" alt="Team Logo">
         </a>
     </div>
 
     <h1> GROCERY</h1>
-    <!-- <h2> Heading 2 </h2> -->
     
-    
-    
-
     {% endblock %}
     
   </body>
