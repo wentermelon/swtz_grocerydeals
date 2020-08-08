@@ -31,8 +31,14 @@ input[type="submit"] {
   margin: 4px 2px;
   cursor: pointer;
 }
+#github {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+}
 
-div.logo {
+#logo {
   position: fixed;
   bottom: 1080;
   right: 1000;
@@ -74,7 +80,6 @@ h1 {
   font-family: screentext;
   color: rgb(0, 0, 0);
   font-size: 100px;
-  font-weight: lighter;
   text-align-last: center;
 }
 h2 {
