@@ -11,8 +11,8 @@ gmaps = googlemaps.Client(key = API_key)
 user_postal_code = 'N1E 6Y5'
 
 #User search generality
-user_lat = gmaps.geocode('168 Cityview Drive North, Ontario, Canada')[0]['geometry']['location']['lat']
-user_long = gmaps.geocode('168 Cityview Drive North, Ontario, Canada')[0]['geometry']['location']['lng']
+user_lat = gmaps.geocode('500 edinburgh road south')[0]['geometry']['location']['lat']
+user_long = gmaps.geocode('500 edinburgh road south')[0]['geometry']['location']['lng']
 user_latlong = (user_lat,user_long)
 user_radius = 10000
 
