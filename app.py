@@ -75,7 +75,15 @@ def data():
     
 
 
-    return render_template("results.html", metroName = productNameMetro, metroPrice = productPriceMetro)
+    return render_template("results.html", 
+        mlength = len(productNameMetro) ,
+        metroName = productNameMetro, 
+        metroPrice = productPriceMetro,
+        metroUnit = productUnitMetro,
+        Llength = len(productNameLongos),
+        longosName = productNameLongos,
+        longosPrice= productPriceLongos,
+        longosUnit = productUnitLongos)
 
 
 if __name__ == "__main__":
