@@ -53,21 +53,33 @@ input[type="submit"] {
 }
 #results {
   z-index: 1;
-  position: absolute;
-  margin-top: 0px;
-  margin-left: 150px;
-  margin-right: 150px;
-  width: 1050px;
-  height: 1000px;
+  width: 80vw;
+  height: 80vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#resultsImage {
+  border-radius: 0;
+  width: 80vw;
+  height: 225vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #table {
   z-index: 2;
   position: absolute;
-  margin-top: 10px;
-  width: 1030px;
-  height: 1000px;
-  border: 2px solid black;
+  width: 80vw;
+  height: 80vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 10px;
+  left: 10px;
 }
 
 #result_title {
@@ -164,5 +176,6 @@ p {
 }
 
 table, td {
-  border: 1px solid black;
+  font-family: screentext;
+  font-size: 20px;
 }
