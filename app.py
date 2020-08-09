@@ -23,22 +23,30 @@ def data():
     productInfoMetro = flask_metro.flask_metro(productName)
     productInfoLongos = flask_longos.flask_longos(productName)
     # productInfoZehrs = flask_zehrs.flask_zehrs(productName)
+<<<<<<< HEAD
     productInfoNofrills = flask_nofrills.flask_nofrills(productName)
+=======
+    # productInfoNofrills = flask_nofrills.flask_nofrills(productName)
+
+>>>>>>> 2476d1bce5840e10000c55345e58c2299f01d210
     nearbyStores = flask_googlemapsearch.flask_googlemapsearch(
         userAddress, userRadius)
     # Metro Product Info
     productNameMetro = []
     productPriceMetro = []
     productUnitMetro = []
+
     # Longo's Product Info
     productNameLongos = []
     productPriceLongos = []
     productUnitLongos = []
+
     # Zehr's Product Info
     # productNameZehrs = []
     # productPriceZehrs = []
     # productUnitZehrs = []
-    # Nofrill's Product Info
+
+    #Nofrill's Product Info
     # productNameNofrills = []
     # productPriceNofrills = []
     # productUnitNofrills = []
@@ -71,10 +79,18 @@ def data():
     #     productPriceNofrills.append(value[0])
     #     productUnitNofrills.append(value[1])
 
+<<<<<<< HEAD
     return productInfoNofrills
 
+=======
+    # return productInfoNofrills
+>>>>>>> 2476d1bce5840e10000c55345e58c2299f01d210
     #print(productName, file=sys.stdout)
-    # return render_template("results.html")
+
+    
+
+
+    return render_template("results.html", metroName = productNameMetro, metroPrice = productPriceMetro)
 
 
 if __name__ == "__main__":
