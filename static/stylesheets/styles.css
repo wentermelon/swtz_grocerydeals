@@ -38,6 +38,8 @@ input[type="submit"] {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+/*DIV ids specifications -> LOGO, GITHUB, RESULTS page*/
 #github {
   position: fixed;
   bottom: 0;
@@ -58,7 +60,6 @@ input[type="submit"] {
   width: 1050px;
   height: 1000px;
 }
-
 #result_title {
   position: relative;
   margin-top: 5px;
@@ -67,14 +68,13 @@ input[type="submit"] {
   left: 50%;
   transform: translate(-50%, 0%);
 }
-
 div.title {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+/*LOGO and GITHUB formatting*/
 img {
   border-radius: 50%;
   padding: 5px;
@@ -83,6 +83,8 @@ img {
 /* img:hover {
   box-shadow: 0 0 1px 2px rgba(177, 37, 84, 0.5);
 } */
+
+/*CUSTOM FONTS*/
 @font-face {
   font-family: appname;
   src: url("/static/css/fonts/Milko\ Denilo.ttf");
@@ -91,6 +93,8 @@ img {
   font-family: screentext;
   src: url("/static/css/fonts/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf");
 }
+
+/*On screen text & Background customizations*/
 body {
   background-color: rgba(227, 165, 135);
   background-image: url("/static/css/img/BACKGROUND.png");

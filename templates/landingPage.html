@@ -8,7 +8,7 @@
   <body>
     {% extends 'layout.html' %} {% block body %}
 
-    <!--LOGO IN CORNER-->
+    <!--LOGO IN top right CORNER-->
     <div class="logo">
       <a
         target="_blank"
@@ -21,37 +21,24 @@
       </a>
     </div>
 
+    <!--GITHUB Link, bottom right corner-->
     <div id="github">
       <a target="_blank" href="https://github.com/TinsonWang/hack-instead-2020">
-        <img
-          src="{{ url_for('static', filename='css/img/github.png') }}"
-          alt="TEAM LOGO"
-        />
+        <img src="{{ url_for('static', filename='css/img/github.png') }}" alt="TEAM LOGO" />
       </a>
     </div>
 
     <!--TITLE OF APP-->
     <div class="title">
-      <h1>GROCERY</h1>
-      <!-- TITLE OF APPLICATION ON CENTER OF SCREEN-->
+      <h1>GROCERY</h1>    <!-- TITLE OF APPLICATION ON CENTER OF SCREEN-->
     </div>
 
     <!--ENTRY FORM-->
     <div class="container">
       <form action="{{ url_for('data') }}" id="desiredProduct" method="POST">
-        <input
-          type="text"
-          placeholder="Enter Product"
-          id="product"
-          name="product"
-        />
+        <input type="text" placeholder="Enter Product" id="product" name="product" />
         <input type="text" placeholder="Address" id="address" name="address" />
-        <input
-          type="text"
-          placeholder="Radius in km"
-          id="radius"
-          name="radius"
-        />
+        <input type="text" placeholder="Radius in km" id="radius" name="radius" />
         <input type="submit" />
       </form>
     </div>

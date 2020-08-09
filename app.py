@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
     return render_template("landingPage.html")
 
-@app.route("/productQuery", methods=['POST'])
+@app.route("/results", methods=['POST'])
 def data():
     productName = request.form['product']
     userAddress = request.form['address']
@@ -39,12 +39,9 @@ def data():
         productPriceLongos.append(value[0])
         productUnitLongos.append(value[1])
 
-    return 200
-
-@app.route("/results")
-def results():
+    #print(productName, file=sys.stdout)
     return render_template("results.html")
-
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
