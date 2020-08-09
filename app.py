@@ -23,7 +23,7 @@ def data():
     productInfoMetro = flask_metro.flask_metro(productName)
     productInfoLongos = flask_longos.flask_longos(productName)
     # productInfoZehrs = flask_zehrs.flask_zehrs(productName)
-    # productInfoNofrills = flask_nofrills.flask_nofrills(productName)
+    productInfoNofrills = flask_nofrills.flask_nofrills(productName)
     nearbyStores = flask_googlemapsearch.flask_googlemapsearch(
         userAddress, userRadius)
     # Metro Product Info
@@ -55,6 +55,12 @@ def data():
         productPriceLongos.append(value[0])
         productUnitLongos.append(value[1])
 
+    for key, value in nearbyStores:
+        if (key.startswith('Metro' or 'metro')):
+            nearbyMetro = value
+        if (key.startswith('Longo' or 'longo')):
+            nearbyLongo = value
+
     # for key, value in productInfoZehrs.items():
     #     productNameZehrs.append(key)
     #     productPriceZehrs.append(value[0])
@@ -65,7 +71,7 @@ def data():
     #     productPriceNofrills.append(value[0])
     #     productUnitNofrills.append(value[1])
 
-    return nearbyStores
+    return productInfoNofrills
 
     #print(productName, file=sys.stdout)
     # return render_template("results.html")

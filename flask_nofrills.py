@@ -14,6 +14,9 @@ import sys
 
 
 def flask_nofrills(user_search_term):
+
+    print(os.path.dirname(__file__), file=sys.stdout)
+
     DRIVER_PATH = "chromedriver.exe"
     options = Options()
     options.headless = True
@@ -60,4 +63,5 @@ def flask_nofrills(user_search_term):
     #products_json = json.dumps(products_dict)
     # print(products_json)
     driver.quit()
+
     return products_dict
