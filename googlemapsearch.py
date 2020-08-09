@@ -11,8 +11,8 @@ gmaps = googlemaps.Client(key = API_key)
 user_postal_code = 'N1E 6Y5'
 
 #User search generality
-user_lat = gmaps.geocode('168 Cityview Drive North, Ontario, Canada')[0]['geometry']['location']['lat']
-user_long = gmaps.geocode('168 Cityview Drive North, Ontario, Canada')[0]['geometry']['location']['lng']
+user_lat = gmaps.geocode('500 edinburgh road south')[0]['geometry']['location']['lat']
+user_long = gmaps.geocode('500 edinburgh road south')[0]['geometry']['location']['lng']
 user_latlong = (user_lat,user_long)
 user_radius = 3000
 
@@ -26,10 +26,20 @@ if not len(gmaps_nearby):
     #print(gmaps_json)
 
 store_dict = {}
-#store_list = []
+store_list = [  'metro',
+                'longo\'s',
+                'zehrs',
+                'no frills']
 
 for store in gmaps_nearby:
-    store_dict[store['name']]= store['vicinity']
+
+    # for x in store_list:
+    #     if x in store['name'].lower():
+    #         store_dict[store['name']]= store['vicinity']
+
+    if "metros" in store['name'].lower() or "longos" in store['name'].lower() or "zehrs" in store['name'].lower() or "no frills" in store['name'].lower():
+        store_dict[store['name']]= store['vicinity']
+
     #store_location = store['name'] + " at " + store['vicinity']
     #store_list.append(store_location)
 
