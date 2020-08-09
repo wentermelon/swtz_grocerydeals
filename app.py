@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import flask_metro
 
 app = Flask(__name__)
 
@@ -11,8 +12,11 @@ def index():
 @app.route("/productQuery", methods=['POST'])
 def data():
     productName = request.form['product']
-    userAddress = request.form['address']
-    return productName + " , " + userAddress
+    # userAddress = request.form['address']
+    # The function returns a python dictionary
+    productInfo = flask_metro.flask_metro(productName)
+
+    return productInfo
 
 
 if __name__ == "__main__":
