@@ -39,7 +39,8 @@ def data():
         productPriceLongos.append(value[0])
         productUnitLongos.append(value[1])
 
-    #print(productName, file=sys.stdout)
+    //stores = {productNameMetro, productPriceMetro, productUnitLongos}
+
     return render_template("results.html")
     
 

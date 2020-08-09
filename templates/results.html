@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SWaTZ application</title>
   </head>
-  
+
   <body>
     {% extends 'layout.html' %} {% block body %}
 
@@ -14,12 +14,26 @@
     </div>
 
     <div id="results">
+        <!-- <p id="demo"></p> -->
+        <!-- <p>Here is my variable: {{ variable[0] }}</p> -->
         <img 
             src="{{ url_for('static', filename='css/img/tablebgresults.png') }}" 
             alt="Price Results"
             style="border-radius: 15px; padding: 5px; width: 1050px; height: 1000px;"
         />
     </div>
+
+    <!-- <button onclick="myFunction()">Try it</button>-->
+    <script>
+        // var Metro = [];
+        // document.getElementById("demo").innerHTML = Metro;
+
+        // function myFunction() {
+        //     Metro.push("Lemon");
+        //     document.getElementById("demo").innerHTML = Metro;
+        // }
+    </script> 
+
     {% endblock %}
   </body>
 </html>

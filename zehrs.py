@@ -12,7 +12,7 @@ import os
 
 import sys
 
-os.chdir(os.path.dirname(__file__))
+# os.chdir(os.path.dirname(__file__))
 
 DRIVER_PATH = "chromedriver.exe"
 options = Options()
