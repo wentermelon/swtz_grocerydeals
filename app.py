@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
 import flask_metro
 import flask_longos
+import flask_zehrs
+import flask_nofrills
+import flask_googlemapsearch
 import sys
 
 app = Flask(__name__)
@@ -10,6 +13,7 @@ app = Flask(__name__)
 def index():
     return render_template("landingPage.html")
 
+
 @app.route("/results", methods=['POST'])
 def data():
     productName = request.form['product']
@@ -18,14 +22,26 @@ def data():
     # The function returns a python dictionary
     productInfoMetro = flask_metro.flask_metro(productName)
     productInfoLongos = flask_longos.flask_longos(productName)
+    # productInfoZehrs = flask_zehrs.flask_zehrs(productName)
+    # productInfoNofrills = flask_nofrills.flask_nofrills(productName)
+    nearbyStores = flask_googlemapsearch.flask_googlemapsearch(
+        userAddress, userRadius)
     # Metro Product Info
     productNameMetro = []
     productPriceMetro = []
     productUnitMetro = []
-    # Longos Product Info
+    # Longo's Product Info
     productNameLongos = []
     productPriceLongos = []
     productUnitLongos = []
+    # Zehr's Product Info
+    # productNameZehrs = []
+    # productPriceZehrs = []
+    # productUnitZehrs = []
+    # Nofrill's Product Info
+    # productNameNofrills = []
+    # productPriceNofrills = []
+    # productUnitNofrills = []
 
     for key, value in productInfoMetro.items():
         # print(key, file=sys.stdout)
@@ -39,10 +55,21 @@ def data():
         productPriceLongos.append(value[0])
         productUnitLongos.append(value[1])
 
-    //stores = {productNameMetro, productPriceMetro, productUnitLongos}
+    # for key, value in productInfoZehrs.items():
+    #     productNameZehrs.append(key)
+    #     productPriceZehrs.append(value[0])
+    #     productUnitZehrs.append(value[1])
 
-    return render_template("results.html")
-    
+    # for key, value in productInfoNofrills.items():
+    #     productNameNofrills.append(key)
+    #     productPriceNofrills.append(value[0])
+    #     productUnitNofrills.append(value[1])
+
+    return nearbyStores
+
+    #print(productName, file=sys.stdout)
+    # return render_template("results.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
