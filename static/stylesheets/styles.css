@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+/* Designing the search bar on landing page */
 #desiredProduct {
   display: flex;
   justify-content: center;
@@ -51,6 +52,7 @@ input[type="submit"] {
   right: 1000;
   width: 120px;
 }
+/* Organizing the results page */
 #results {
   z-index: 1;
   width: 80vw;
@@ -64,11 +66,7 @@ input[type="submit"] {
 #resultsImage {
   border-radius: 0;
   width: 80vw;
-<<<<<<< HEAD
-  height: 80vh;
-=======
   height: 225vh;
->>>>>>> ee9e994bd16de4450c9ec8dcd15d08eea2be653b
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -179,13 +177,8 @@ p {
   text-indent: 10%;
 }
 
-<<<<<<< HEAD
 table,
 td {
-  border: 1px solid black;
-=======
-table, td {
   font-family: screentext;
   font-size: 20px;
->>>>>>> ee9e994bd16de4450c9ec8dcd15d08eea2be653b
 }
