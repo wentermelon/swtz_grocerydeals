@@ -40,7 +40,8 @@ def data():
         productPriceLongos.append(value[0])
         productUnitLongos.append(value[1])
 
-    return 200
+    return render_template("results.html")
+    # You have to pass the results.html templates from here or you won't have access to the variables. You have to pass the variable in render_template as well so look into that.
 
 
 if __name__ == "__main__":
