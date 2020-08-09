@@ -20,7 +20,17 @@ gmaps_nearby = gmaps.places_nearby(user_latlong,user_radius,type="grocery_or_sup
 
 if not len(gmaps_nearby):
     print("No results nearby! Try expanding your search radius.")
-else:
+#else:
     #print(gmaps_nearby)
-    gmaps_json = json.dumps(gmaps_nearby)
-    print(gmaps_json)
+    #gmaps_json = json.dumps(gmaps_nearby)
+    #print(gmaps_json)
+
+store_dict = {}
+#store_list = []
+
+for store in gmaps_nearby:
+    store_dict[store['name']]= store['vicinity']
+    #store_location = store['name'] + " at " + store['vicinity']
+    #store_list.append(store_location)
+
+print(store_dict)
