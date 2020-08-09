@@ -44,12 +44,28 @@ input[type="submit"] {
   right: 0;
   width: 100px;
 }
-
 #logo {
   position: fixed;
   bottom: 1080;
   right: 1000;
   width: 120px;
+}
+#results {
+  position: relative;
+  margin-top: 0px;
+  margin-left: 150px;
+  margin-right: 150px;
+  width: 1050px;
+  height: 1000px;
+}
+
+#result_title {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 div.title {
@@ -64,12 +80,12 @@ img {
   padding: 5px;
   width: 75px;
 }
-img:hover {
+/* img:hover {
   box-shadow: 0 0 1px 2px rgba(177, 37, 84, 0.5);
-}
+} */
 @font-face {
   font-family: appname;
-  src: url("/static/css/fonts/Shink\ Font\ by\ Rifki\ \(7NTypes\).otf");
+  src: url("/static/css/fonts/Milko\ Denilo.ttf");
 }
 @font-face {
   font-family: screentext;
@@ -90,9 +106,9 @@ h1 {
   text-align-last: center;
 }
 h2 {
-  font-family: appname;
-  color: rgba(196, 147, 123, 0);
-  font-size: 80px;
+  font-family: screentext;
+  color: rgb(255, 255, 255);
+  font-size: 100px;
   text-align-last: center;
 }
 h3 {

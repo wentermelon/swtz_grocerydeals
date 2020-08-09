@@ -31,7 +31,7 @@ driver.get("https://www.nofrills.ca/search?search-bar={}".format(search_term))
 time.sleep(5)
 
 # TODO: extend this functionality to select the correct province
-# Click on "British Columbia" button 
+# Click on "British Columbia" button
 driver.find_element_by_css_selector("#site-layout > div.modal-dialog.modal-dialog--region-selector > div.modal-dialog__content > div > div > ul > li:nth-child(2) > button").click()
 
 # Wait for driver to load the website and JS scripts before retrieving HTML

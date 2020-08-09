@@ -53,5 +53,5 @@ def flask_longos(user_search_term):
             product_price, product_unit, product_link]
 
     # The JSON object containing the search results
-    # products_json = json.dumps(products_dict)
+    products_json = json.dumps(products_dict)
     return products_dict

@@ -10,7 +10,6 @@ app = Flask(__name__)
 def index():
     return render_template("landingPage.html")
 
-
 @app.route("/productQuery", methods=['POST'])
 def data():
     productName = request.form['product']
@@ -42,6 +41,10 @@ def data():
 
     return render_template("results.html")
     # You have to pass the results.html templates from here or you won't have access to the variables. You have to pass the variable in render_template as well so look into that.
+
+@app.route("/results")
+def results():
+    return render_template("results.html")
 
 
 if __name__ == "__main__":
