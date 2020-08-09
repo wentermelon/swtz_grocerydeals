@@ -12,8 +12,7 @@ import os
 
 import sys
 
-
-# os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.dirname(__file__))
 
 DRIVER_PATH = "chromedriver.exe"
 options = Options()
@@ -25,14 +24,7 @@ driver = webdriver.Chrome(  executable_path=DRIVER_PATH,
 
 search_term = "apple"
 
-driver.get("https://www.nofrills.ca/search?search-bar={}".format(search_term))
-
-# Wait for driver to load the website and JS scripts before retrieving HTML
-time.sleep(5)
-
-# TODO: extend this functionality to select the correct province
-# Click on "British Columbia" button
-driver.find_element_by_css_selector("#site-layout > div.modal-dialog.modal-dialog--region-selector > div.modal-dialog__content > div > div > ul > li:nth-child(2) > button").click()
+driver.get("https://www.zehrs.ca/search?search-bar={}".format(search_term))
 
 # Wait for driver to load the website and JS scripts before retrieving HTML
 time.sleep(5)
@@ -48,7 +40,7 @@ for result in search_results:
     product_name = result.find("span", {"class":"product-name__item"}).text.strip()
     product_price = result.find("span", {"class":"price__value"}).text.strip()
     product_unit = result.find("span", {"class":"price__unit"}).text.strip()
-    product_link = "https://www.nofrills.ca" + result.find("a", {"class": "product-tile__details__info__name__link"})["href"]
+    product_link = "https://www.zehrs.ca" + result.find("a", {"class": "product-tile__details__info__name__link"})["href"]
 
     products_dict[product_name] = [ product_price, product_unit, product_link ]
 

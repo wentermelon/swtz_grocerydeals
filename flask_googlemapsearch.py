@@ -16,5 +16,17 @@ def flask_googlemapsearch(user_address, user_radius):
 
     if not len(gmaps_nearby):
         print("No results nearby! Try expanding your search radius.")
-    else:
-        return json.dumps(gmaps_nearby)
+    #else:
+        #print(gmaps_nearby)
+        #gmaps_json = json.dumps(gmaps_nearby)
+        #print(gmaps_json)
+
+    store_dict = {}
+    #store_list = []
+
+    for store in gmaps_nearby:
+        store_dict[store['name']]= store['vicinity']
+        #store_location = store['name'] + " at " + store['vicinity']
+        #store_list.append(store_location)
+
+    return store_dict
