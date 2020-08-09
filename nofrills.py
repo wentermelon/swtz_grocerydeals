@@ -10,10 +10,10 @@ from selenium.webdriver.chrome.options import Options
 
 import os
 
-print(os.getcwd())
-print(__file__)
-print(os.path.dirname(__file__))
-os.chdir(os.path.dirname(__file__))
+import sys
+
+
+# os.chdir(os.path.dirname(__file__))
 
 DRIVER_PATH = "chromedriver.exe"
 options = Options()
