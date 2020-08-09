@@ -74,8 +74,11 @@ def data():
     #     productNameNofrills.append(key)
     #     productPriceNofrills.append(value[0])
     #     productUnitNofrills.append(value[1])
+<<<<<<< HEAD
 
     # return productInfoNofrills
+=======
+>>>>>>> ee9e994bd16de4450c9ec8dcd15d08eea2be653b
     #print(productName, file=sys.stdout)
 
     return render_template("results.html",
