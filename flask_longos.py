@@ -7,9 +7,11 @@ from bs4 import BeautifulSoup
 import googlemaps
 import datetime
 
+
 def flask_longos(user_search_term):
     # DEFAULT SEARCH TERM AS "apple"
-    URL = "https://www.grocerygateway.com/store/groceryGateway/en/search/?text={}".format(user_search_term)
+    URL = "https://www.grocerygateway.com/store/groceryGateway/en/search/?text={}".format(
+        user_search_term)
 
     # requests sends HTTP request to the URL above
     page = requests.get(URL)
@@ -38,14 +40,18 @@ def flask_longos(user_search_term):
     # Retrieves name, price, per unit, and link. Stores it in the products dictionary.
     for product in products_list:
 
-        product_name = product.find("a", {"class":"product-card__name"}).text.strip()
-        product_price = product.find("span", {"class":"cart_reader"}).text.strip()
-        product_unit = products_list[0].find("span", {"class":""}).text.strip()
-        product_link = "https://www.grocerygateway.com/" + products_list[0].find("a", {"class":"product-card__name"})['href']
+        product_name = product.find(
+            "a", {"class": "product-card__name"}).text.strip()
+        product_price = product.find(
+            "span", {"class": "cart_reader"}).text.strip()
+        product_unit = products_list[0].find(
+            "span", {"class": ""}).text.strip()
+        product_link = "https://www.grocerygateway.com/" + \
+            products_list[0].find("a", {"class": "product-card__name"})['href']
 
-        products_dict[product_name] = [ product_price, product_unit, product_link ]
+        products_dict[product_name] = [
+            product_price, product_unit, product_link]
 
     # The JSON object containing the search results
     products_json = json.dumps(products_dict)
     return products_dict
-
