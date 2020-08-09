@@ -9,13 +9,14 @@
   <body>
     {% extends 'layout.html' %} {% block body %}
 
+    <!--RESULT PAGE TITLE ON SCREEN-->
     <div id="result_title">
         <h2>RESULTS </h2>
     </div>
 
+    <!--Background for RESULTS TABLE-->
     <div id="results">
         <!-- <p id="demo"></p> -->
-        <!-- <p>Here is my variable: {{ variable[0] }}</p> -->
         <img 
             src="{{ url_for('static', filename='css/img/tablebgresults.png') }}" 
             alt="Price Results"
@@ -23,8 +24,14 @@
         />
     </div>
 
+    <!--TABLE and text-->
+    <div id="table">
+        <h3>METRO</h3>
+        <p>{{ metroName[0] }}</p>
+    </div>
+
     <!-- <button onclick="myFunction()">Try it</button>-->
-    <script>
+    <!-- <script>
         // var Metro = [];
         // document.getElementById("demo").innerHTML = Metro;
 
@@ -32,7 +39,7 @@
         //     Metro.push("Lemon");
         //     document.getElementById("demo").innerHTML = Metro;
         // }
-    </script> 
+    </script>  -->
 
     {% endblock %}
   </body>
