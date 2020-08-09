@@ -26,21 +26,39 @@
       <!--TABLE and text-->
       <div id="table">
         <h3>METRO</h3>
-        <p>{{ metroName[0] }}</p>
-      </div>
+        <hr>
+        <table style="width:100%">
+            <tr>
+              <th>Product Name</th>
+              <th>Price</th> 
+              <th>Units</th>
+            </tr>
+            {%for i in range(0, mlength)%} 
+            <tr>
+              <td>{{metroName[i]}}</td>
+              <td>{{metroPrice[i]}}</td>
+              <td>{{metroUnit[i]}}</td>
+            </tr>
+            {%endfor%} 
+          </table>
+
+          <h3>LONGOS</h3>
+        <hr>
+        <table style="width:100%">
+            <tr>
+              <th>Product Name</th>
+              <th>Price</th> 
+              <th>Units</th>
+            </tr>
+            {%for i in range(0, Llength)%} 
+            <tr>
+              <td>{{longosName[i]}}</td>
+              <td>{{longosPrice[i]}}</td>
+              <td>{{longosUnit[i]}}</td>
+            </tr>
+            {%endfor%} 
+          </table>
     </div>
-
-    <!-- <button onclick="myFunction()">Try it</button>-->
-    <!-- <script>
-        // var Metro = [];
-        // document.getElementById("demo").innerHTML = Metro;
-
-        // function myFunction() {
-        //     Metro.push("Lemon");
-        //     document.getElementById("demo").innerHTML = Metro;
-        // }
-    </script>  -->
-
     {% endblock %}
   </body>
 </html>

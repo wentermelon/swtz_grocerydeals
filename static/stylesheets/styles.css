@@ -109,13 +109,17 @@ img {
 /*CUSTOM FONTS*/
 @font-face {
   font-family: appname;
-  src: url("/static/css/fonts/Milko\ Denilo.ttf");
+  src: url("/static/css/fonts/Hanged\ Letters.ttf");
 }
 @font-face {
   font-family: screentext;
   src: url("/static/css/fonts/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf");
 }
-
+hr {
+  width: 70%;
+  text-align: center;
+  margin-left: 160px;
+}
 /*On screen text & Background customizations*/
 body {
   background-color: rgba(227, 165, 135);
@@ -138,9 +142,12 @@ h2 {
   text-align-last: center;
 }
 h3 {
-  font-family: "Roboto";
-  color: rgb(214, 54, 80);
-  text-align: left;
+  font-family: screentext;
+  margin-top: 12px;
+  color: rgb(219, 90, 66);
+  text-align: center;
+  font-size: 80px;
+  font-weight: lighter;
 }
 h4 {
   font-family: "Candara";
@@ -163,5 +170,12 @@ p {
   font-family: "Candara";
   color: black;
   text-align: left;
-  font-size: 40px;
+  font-size: 30px;
+  margin-top: 10px;
+  text-indent: 10%;
+}
+
+table,
+td {
+  border: 1px solid black;
 }
