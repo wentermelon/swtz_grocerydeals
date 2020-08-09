@@ -46,11 +46,10 @@ input[type="submit"] {
 }
 
 div.title {
-  position: fixed;
-  top: 100;
-  left: 0;
-  width: 1360px;
-  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 img {
@@ -70,15 +69,16 @@ img:hover {
   src: url("/static/css/fonts/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf");
 }
 body {
-  background-color: rgb(227, 165, 135);
+  background-color: rgba(227, 165, 135);
   background-image: url("/static/css/img/BACKGROUND.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  background-attachment: fixed;
 }
 h1 {
   font-family: screentext;
-  color: rgb(0, 0, 0);
+  color: white;
   font-size: 100px;
   text-align-last: center;
 }

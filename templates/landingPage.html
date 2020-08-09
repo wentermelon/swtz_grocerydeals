@@ -8,34 +8,47 @@
   <body>
     {% extends 'layout.html' %} {% block body %}
 
-<!--LOGO IN CORNER-->
+    <!--LOGO IN CORNER-->
     <div class="logo">
-      <a target="_blank" href="{{ url_for('static', filename='css/img/Logo.png') }}">
-        <img src="{{ url_for('static', filename='css/img/Logo.png') }}" alt="TEAM LOGO" />
+      <a
+        target="_blank"
+        href="{{ url_for('static', filename='css/img/Logo.png') }}"
+      >
+        <img
+          src="{{ url_for('static', filename='css/img/Logo.png') }}"
+          alt="TEAM LOGO"
+        />
       </a>
     </div>
 
     <div id="github">
       <a target="_blank" href="https://github.com/TinsonWang/hack-instead-2020">
-        <img src="{{ url_for('static', filename='css/img/github.png') }}" alt="TEAM LOGO" />
-      </a>    </div>
-
-<!--TITLE OF APP-->
-    <div class="title">
-      <h2> {} </h2>
-      <h1>GROCERY</h1> <!-- TITLE OF APPLICATION ON CENTER OF SCREEN-->
+        <img
+          src="{{ url_for('static', filename='css/img/github.png') }}"
+          alt="TEAM LOGO"
+        />
+      </a>
     </div>
 
-<!--ENTRY FORM-->
+    <!--TITLE OF APP-->
+    <div class="title">
+      <h1>GROCERY</h1>
+      <!-- TITLE OF APPLICATION ON CENTER OF SCREEN-->
+    </div>
+
+    <!--ENTRY FORM-->
     <div class="container">
       <form action="{{ url_for('data') }}" id="desiredProduct" method="POST">
-        <input type="text" placeholder="Enter Product" id="product" name="product"/>
+        <input
+          type="text"
+          placeholder="Enter Product"
+          id="product"
+          name="product"
+        />
         <input type="text" placeholder="Address" id="address" name="address" />
-        <input type="submit"/>
+        <input type="submit" />
       </form>
     </div>
-    
-
 
     {% endblock %}
   </body>
