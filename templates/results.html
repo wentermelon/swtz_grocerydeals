@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWaTZ application</title>
+  </head>
+  <body>
+    {% extends 'layout.html' %} {% block body %}
+
+    <div id="result_title">
+        <h2>RESULTS</h2>
+    </div>
+
+    <div id="results">
+        <img 
+        src="{{ url_for('static', filename='css/img/tablebgresults.png') }}" 
+        alt="Price Results"
+        style="border-radius: 15px; padding: 5px; width: 1050px; height: 1000px; "
+        />
+    </div>
+
+    
+
+    {% endblock %}
+  </body>
+</html>
+
+<!--  all rgb colours
+Orange yellow crayola - 255,210,117
+earth yellow - 232,174,104
+cafe au lait - 165,127,96
+tumbleweed - 227,165,135
+fire opal - 219,90,66
+-->

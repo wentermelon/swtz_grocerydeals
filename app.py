@@ -8,7 +8,6 @@ app = Flask(__name__)
 def index():
     return render_template("landingPage.html")
 
-
 @app.route("/productQuery", methods=['POST'])
 def data():
     productName = request.form['product']
@@ -17,6 +16,10 @@ def data():
     productInfo = flask_metro.flask_metro(productName)
 
     return productInfo
+
+@app.route("/results")
+def results():
+    return render_template("results.html")
 
 
 if __name__ == "__main__":
