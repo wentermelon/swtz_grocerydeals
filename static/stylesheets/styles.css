@@ -22,6 +22,13 @@
   margin: 8px 5px;
   box-sizing: border-box;
 }
+#radius {
+  font-family: screentext;
+  width: 15%;
+  padding: 10px 10px;
+  margin: 8px 5px;
+  box-sizing: border-box;
+}
 input[type="submit"] {
   font-family: screentext;
   background-color: #ffd275;
