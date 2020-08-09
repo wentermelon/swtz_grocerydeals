@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import flask_metro
 import flask_longos
 import sys
+import flask_googlemapsearch
 
 app = Flask(__name__)
 
@@ -9,6 +10,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("landingPage.html")
+
 
 @app.route("/productQuery", methods=['POST'])
 def data():
@@ -18,6 +20,9 @@ def data():
     # The function returns a python dictionary
     productInfoMetro = flask_metro.flask_metro(productName)
     productInfoLongos = flask_longos.flask_longos(productName)
+    # Function returns store locations within user's chosen vacinity.
+    storeLocations = flask_googlemapsearch.flask_googlemapsearch(
+        userAddress, userRadius)
     # Metro Product Info
     productNameMetro = []
     productPriceMetro = []
@@ -39,8 +44,11 @@ def data():
         productPriceLongos.append(value[0])
         productUnitLongos.append(value[1])
 
-    return render_template("results.html")
+    return productInfoLongos
+
+    # return render_template("results.html")
     # You have to pass the results.html templates from here or you won't have access to the variables. You have to pass the variable in render_template as well so look into that.
+
 
 @app.route("/results")
 def results():
