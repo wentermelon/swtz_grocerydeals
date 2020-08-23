@@ -5,7 +5,7 @@ import json
 
 def flask_googlemapsearch(user_address, user_radius):
     # Note: user_radius will have to be capped at MAYBE <25000? due to weird, inconsistent results
-    API_key = "AIzaSyC5hX_ccGsWexNYHYVreA8qsFtG0Kj9MHM"
+    API_key = ""
     gmaps = googlemaps.Client(key=API_key)
 
     # Location and user generality, but for now rely on user address
